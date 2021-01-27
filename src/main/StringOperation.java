@@ -2,7 +2,7 @@ package main;
 
 public class StringOperation {
 	
-	public String convertToDigits(String input){
+	public String extractDigits(String input){
 		if (input.length() > 0) {
 			boolean separator = false;
 			StringBuilder sb = new StringBuilder();

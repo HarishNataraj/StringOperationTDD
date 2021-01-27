@@ -13,32 +13,32 @@ public class StringOperationTest {
 	
 	@Test
 	public void forEmptyString() {
-		assertEquals("",stringOperation.convertToDigits(""));
+		assertEquals("",stringOperation.extractDigits(""));
 	}
 	
 	@Test
 	public void forSingleDigit() {
-		assertEquals("1",stringOperation.convertToDigits("1"));
+		assertEquals("1",stringOperation.extractDigits("1"));
 	}
 	
 	@Test
 	public void forDoubleDigits() {
-		assertEquals("1,0",stringOperation.convertToDigits("10"));
+		assertEquals("1,0",stringOperation.extractDigits("10"));
 	}
 	
 	@Test
 	public void forMultipleDigits() {
-		assertEquals("1,0,0",stringOperation.convertToDigits("100"));
+		assertEquals("1,0,0",stringOperation.extractDigits("100"));
 	}
 	
 	@Test
 	public void forSequenceOfNumbers() {
-		assertEquals("1,0,2,0",stringOperation.convertToDigits("10,20"));
+		assertEquals("1,0,2,0",stringOperation.extractDigits("10,20"));
 	}
 	
 	@Test
 	public void fortest() {
-		assertEquals("1,0,2,0,3,0",stringOperation.convertToDigits("?10,20,30..."));
+		assertEquals("1,0,2,0,3,0",stringOperation.extractDigits("?10,20,30..."));
 	}
 	
 
